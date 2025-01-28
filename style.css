@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(220, 208, 231);
+}
+.wrapper {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    perspective:1000px ;
+}
+
+.wrapper .flip-card {
+    position: relative;
+    height: 220px;
+    width: 300px;
+    background-color: rgb(61, 9, 110);
+    transform-style: preserve-3d;
+    transition: all 1s ease-in-out;
+    transform: rotateY(180deg);
+}
+
+#card1:hover {
+    transform: rotateY(0deg);
+}
+#card2:hover {
+    transform: rotateY(0deg);
+}
+#card3:hover {
+    transform: rotateY(0deg);
+}
+#card4:hover {
+    transform: rotateY(0deg);
+}
+#card5:hover {
+    transform: rotateY(0deg);
+}
+#card6:hover {
+    transform: rotateY(0deg);
+}
+#card7:hover {
+    transform: rotateY(0deg);
+}
+#card8:hover {
+    transform: rotateY(0deg);
+}
+#card9:hover {
+    transform: rotateY(0deg);
+}
+#card10:hover {
+    transform: rotateY(0deg);
+}
+#card11:hover {
+    transform: rotateY(0deg);
+}
+#card12:hover {
+    transform: rotateY(0deg);
+}
+
+
+.flip-card .front-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    background-color: rgb(61, 9, 110);
+    border-top: 2px solid #20003d;
+    border-left: 2px solid #20003d;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+    backface-visibility: hidden;
+}
+
+.front-card .triangle::before {
+    content: "";
+    position: absolute;
+    height: 0;
+    width:  0;
+    left: -40px;
+    top: 20px;
+    border-right: 40px solid transparent;
+    border-left: 40px solid transparent;
+    border-bottom: 80px solid rgb(61, 9, 110);;
+}
+
+.front-card .triangle {
+    position: relative;
+    height: 0;
+    width:  0;
+    border-right: 60px solid transparent;
+    border-left: 60px solid transparent;
+    border-bottom: 110px solid rgb(142, 243, 233);
+}
